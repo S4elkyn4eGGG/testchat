@@ -1,0 +1,6 @@
+package.json
+package-lock.json
+yarn.lock
+dist
+karma.conf.js
+e2e/protractor.conf.js

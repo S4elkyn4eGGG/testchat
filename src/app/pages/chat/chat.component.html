@@ -1,0 +1,23 @@
+<div class="chat">
+  <div class="chat__welcome">
+    <p>Hello</p>
+    <div class="chat__welcome__user">
+      <input type="checkbox" id="user" />
+      <label for="user">
+        <div class="chat__welcome__user_name">{{ user }}</div>
+      </label>
+      <div routerLink="/login" class="logout_panel">
+        Log out
+      </div>
+    </div>
+  </div>
+  <div class="chat__content">
+    <app-message *ngFor="let message of messages" [config]="message" [current]="1"> </app-message>
+  </div>
+  <div class="chat__footer">
+    <app-input placeholder="Type your message here..." class="chat__footer_input"></app-input>
+    <app-button btnType="send">
+      <i class="chat__footer_send"></i>
+    </app-button>
+  </div>
+</div>

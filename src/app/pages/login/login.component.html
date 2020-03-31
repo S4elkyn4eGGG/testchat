@@ -1,0 +1,11 @@
+<div class="login" [formGroup]="loginForm">
+  <div class="login_back"></div>
+  <div class="login_container" [@defaultAnimation]="isLogin">
+    <div class="login_container__title">{{ title }}</div>
+    <app-input *ngIf="!isLogin" formControlName="name" placeholder="Your name"></app-input>
+    <app-input formControlName="email" placeholder="Your email address"></app-input>
+    <app-input formControlName="password" placeholder="Your password"></app-input>
+    <div (click)="changeForm()" class="login_container__label">{{ label }}</div>
+    <app-button (click)="isLogin ? signIn() : signUp()">{{ title }}</app-button>
+  </div>
+</div>
